@@ -1,11 +1,11 @@
 <div align="center">
   
-# Buscador biblico
+# Buscador biblico :books:
 
-## Sobre o projeto
+## Sobre o projeto :mag_right:
 Projeto desenvolvido para buscar qualquer livro, capitulo e versiculo da biblia de forma ágil, fácil e precisa. 
 
-## Tecnologias utilizadas
+## Instrumentos utilizados :hammer:
 
 | Tecnologias | Ferramentas        |
 |-------------|--------------------|
@@ -14,7 +14,7 @@ Projeto desenvolvido para buscar qualquer livro, capitulo e versiculo da biblia 
 | Javascript  | Vercel             |
 | Tailwind    | Vlibras            |
 
-## Como clonar o repositório
+## Como clonar o repositório  :floppy_disk:
 
 Para clonar o repositório, utilize o comando:
 
@@ -22,7 +22,7 @@ Para clonar o repositório, utilize o comando:
 git clone https://github.com/derickcsantos/Buscador-biblico.git
 ```
   
-## Mídia
+## Mídia :globe_with_meridians:
   
 🔗 Para conhecer mais do meu trabalho, [clique aqui](https://www.linkedin.com/in/derickcampossantos/)
 
