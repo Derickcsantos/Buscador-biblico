@@ -17,6 +17,7 @@ body{
 
 #containerPesquisa{
     max-width: 600px;
+    width: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -31,7 +32,7 @@ body{
 #containerPesquisa input{
     border: 1px solid #ccc;
     border-radius: 15px;
-    padding: 5px;
+    padding: 5px 0 5px 10px;
     margin: 5px;
     width: 90%;
 }
@@ -40,6 +41,18 @@ body{
     border: 1px solid #595959;
     border-radius: 15px;
     padding: 10px;
+    transition: 0.3s ease;
+    margin: 10px 0 5px 0;
+}
+
+#ativarModal:hover{
+    transform: scale(1.1);
+    box-shadow: 3px 3px 3px rgb(255, 123, 0);
+}
+
+#referencia{
+    text-decoration: underline;
+    margin: 0 0 10px 0;
 }
 
 #containerInformacoes{
@@ -48,7 +61,7 @@ body{
     left: 50%;
     transform: translate(-50%,-50%);
     width: 600px;
-    height: 400px;
+    min-height: 500px;
     border: 1px solid #000;
     display: none;
     text-align: center;
@@ -58,8 +71,29 @@ body{
     background-color: rgb(255, 255, 255);
 }
 
+#containerInformacoes h1{
+    margin: 8px 0 0 0;
+}
+
 #dadosBiblicos{
     padding: 50px 20px 20px 20px;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    height: 100%;
+}
+
+.modalTop{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    height: 80%;
+}
+
+.modalBottom{
+    position: absolute;
+    bottom: 3%;
+    background-color: orange;
 }
 
 #fecharModal{
@@ -68,5 +102,25 @@ body{
     right: 3%;
 }
 
+.rodape{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(255, 123, 0);
+    text-align: center;
+}
 
+.rodape p{
+    font-size: 11px;
+}
+
+@media (width < 480px){
+    #containerPesquisa{
+        width: 90%;
+    }
+
+    #containerInformacoes{
+        width: 90%
+    }
+}
 

@@ -1,11 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index,follow">	
+    <meta name="description" content="Buscador biblico é um projeto com intuito de otimizar a procura por textos biblicos">
+    <meta name="keyword" content="Biblia, buscador, buscador biblico, jesus, jesus cristo, cristo, evangelho, cristão, biblia digital">
+    <meta name="author" content=" Dérick campos santos, Derick, Dking">
+    <meta name="language" content="pt-BR">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="generator" content="Visual studio code">
+
+    <meta name="google-site-verification" content="Sngd0CJaS-1oIXu-2khI_ObmvaArwtgqaceLyc1cPWI" />
+
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"> <!-- Evitar cache -->
+    <meta http-equiv="Pragma" content="public">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <meta name="country" content="Brazil">
+    <meta name="language" content="Portuguese, PT-BR">
+    <meta name="geography" content="São Paulo, SP">
+    <meta name="copyright" content="https://buscadorbiblico-dcs.vercel.app/">
+
+    <meta name="googlebot" content="index, follow">
+    <meta name="baidubot" content="index, follow">
+    <meta name="slurp" content="index, follow">
+    <meta name="yahoobot" content="index, follow">
+    <meta name="unknownbot" content="index, follow">
+    <meta name="msnbot" content="index, follow">
+    <meta name="robots" content="index,follow">
+
+    <meta property="og:description" content="Buscador biblico é um projeto com intuito de otimizar a procura por textos biblicos">
+
+    <meta property="og:title" content="Buscador biblico">
+    <meta property="og:url" content="https://gugutalkshoww.vercel.app/">
+    <meta property="og:site_name" content="Gugu Talkshow">
+    <meta property="og:image" content="img/logo.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="700">
+    <meta property="og:image:height" content="366">
+
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="style.css">
-    <title>Dados da bíblia</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <title>Buscador biblico</title>
+
 </head>
 <body>
     <div vw class="enabled">
@@ -16,7 +56,7 @@
     </div>
 
     <div id="containerPesquisa" class="flex flex-col">
-        <h1 class="text-center">Dados da bíblia</h1>
+        <h1 class="text-center">Buscador biblico</h1>
         <input id="livroNome" type="text" placeholder="Digite o nome do livro">
         <input id="capituloNumero" type="number" placeholder="Digite capitulo">
         <input id="versoNumero" type="number" placeholder="Digite o versiculo">
@@ -29,13 +69,21 @@
         </svg>
         <h1 class="font-bold">Informações da busca</h1>
         <div id="dadosBiblicos" class="flex flex-col  justify-between">
-            <p id="referencia" class="underline">O livro aparecerá aqui</p>
-            <p id="texto" >O texto aparecerá aqui </p>
+           <div class="modalTop">
+             <p id="referencia" class="underline">Sem dados</p>
+                <p id="texto" ></p>
+           </div>
            <div class="modalBottom flex flex-col justify-end">
-              <p id="versao">A versão aparecerá aqui</p>
+              <p id="versao"></p>
            </div>
         </div>
     </div>
+
+    <footer>
+        <div class="rodape">
+            <p>Desenvolvido por <a href="https://linkedin.com/in/derick-campos-santos">Dérick Campos Santos</a></p>
+        </div>
+    </footer>
     
     <script src="script.js"></script>
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
