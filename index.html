@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Dados da bíblia</title>
+</head>
+<body>
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <div id="containerPesquisa" class="flex flex-col">
+        <h1 class="text-center">Dados da bíblia</h1>
+        <input id="livroNome" type="text" placeholder="Digite o nome do livro">
+        <input id="capituloNumero" type="number" placeholder="Digite capitulo">
+        <input id="versoNumero" type="number" placeholder="Digite o versiculo">
+    <button id="ativarModal" onclick="PesquisarDados()">Clique aqui</button>
+    </div>
+
+    <div id="containerInformacoes" class="border-black flex-col flex" >
+        <svg id="fecharModal" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+        </svg>
+        <h1 class="font-bold">Informações da busca</h1>
+        <div id="dadosBiblicos" class="flex flex-col  justify-between">
+            <p id="referencia" class="underline">O livro aparecerá aqui</p>
+            <p id="texto" >O texto aparecerá aqui </p>
+           <div class="modalBottom flex flex-col justify-end">
+              <p id="versao">A versão aparecerá aqui</p>
+           </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+         new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+</body>
+</html>
