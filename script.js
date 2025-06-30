@@ -7,6 +7,14 @@ async function PesquisarDados() {
     let url = await fetch(`https://bible-api.com/${livro}+${capitulo}:${verso}?translation=almeida`);
     let dados = await url.json();
 
+    if (dados.error){
+        dados = {
+            reference: "Sem referência",
+            text: "Sem dados",
+            translation_name: "Sem dados"
+        };
+    }
+
 console.log(dados);
 console.log(dados.reference);
 console.log(dados.text);
