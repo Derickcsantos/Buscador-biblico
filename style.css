@@ -93,7 +93,6 @@ body{
 .modalBottom{
     position: absolute;
     bottom: 3%;
-    background-color: orange;
 }
 
 #fecharModal{
