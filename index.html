@@ -1,94 +1,94 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="index,follow">	
-    <meta name="description" content="Buscador biblico é um projeto com intuito de otimizar a procura por textos biblicos">
-    <meta name="keyword" content="Biblia, buscador, buscador biblico, jesus, jesus cristo, cristo, evangelho, cristão, biblia digital">
-    <meta name="author" content=" Dérick campos santos, Derick, Dking">
-    <meta name="language" content="pt-BR">
-    <meta name="theme-color" content="#ffffff">
-    <meta name="generator" content="Visual studio code">
-
-    <meta name="google-site-verification" content="Sngd0CJaS-1oIXu-2khI_ObmvaArwtgqaceLyc1cPWI" />
-
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"> <!-- Evitar cache -->
-    <meta http-equiv="Pragma" content="public">
-    <meta http-equiv="Expires" content="0">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-
-    <meta name="country" content="Brazil">
-    <meta name="language" content="Portuguese, PT-BR">
-    <meta name="geography" content="São Paulo, SP">
-    <meta name="copyright" content="https://buscadorbiblico-dcs.vercel.app/">
-
-    <meta name="googlebot" content="index, follow">
-    <meta name="baidubot" content="index, follow">
-    <meta name="slurp" content="index, follow">
-    <meta name="yahoobot" content="index, follow">
-    <meta name="unknownbot" content="index, follow">
-    <meta name="msnbot" content="index, follow">
-    <meta name="robots" content="index,follow">
-
-    <meta property="og:description" content="Buscador biblico é um projeto com intuito de otimizar a procura por textos biblicos">
-
-    <meta property="og:title" content="Buscador biblico">
-    <meta property="og:url" content="https://gugutalkshoww.vercel.app/">
-    <meta property="og:site_name" content="Gugu Talkshow">
-    <meta property="og:image" content="img/logo.png">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:width" content="700">
-    <meta property="og:image:height" content="366">
-
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="img/logo.png" type="image/png">
-    <title>Buscador biblico</title>
-
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index,follow" />
+  <meta name="description" content="Buscador bíblico é um projeto com intuito de otimizar a procura por textos bíblicos" />
+  <meta name="keyword" content="Biblia, buscador, buscador bíblico, jesus, jesus cristo, cristo, evangelho, cristão, biblia digital" />
+  <meta name="author" content="Dérick Campos Santos" />
+  <meta name="language" content="pt-BR" />
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="generator" content="Visual Studio Code" />
+  <meta name="google-site-verification" content="Sngd0CJaS-1oIXu-2khI_ObmvaArwtgqaceLyc1cPWI" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="public" />
+  <meta http-equiv="Expires" content="0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta property="og:title" content="Buscador bíblico" />
+  <meta property="og:url" content="https://gugutalkshoww.vercel.app/" />
+  <meta property="og:site_name" content="Gugu Talkshow" />
+  <meta property="og:description" content="Buscador bíblico é um projeto com intuito de otimizar a procura por textos bíblicos" />
+  <meta property="og:image" content="img/logo.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="700" />
+  <meta property="og:image:height" content="366" />
+  <link rel="icon" href="img/logo.png" type="image/png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Buscador bíblico</title>
 </head>
-<body>
+<body class="bg-white min-h-screen overflow-x-hidden relative font-[Poppins]">
+
+  <!-- VLibras -->
+  <div id="vlibras-container">
     <div vw class="enabled">
-        <div vw-access-button class="active"></div>
-        <div vw-plugin-wrapper>
-          <div class="vw-plugin-top-wrapper"></div>
-        </div>
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
     </div>
+  </div>
 
-    <div id="containerPesquisa" class="flex flex-col">
-        <h1 class="text-center">Buscador biblico</h1>
-        <input id="livroNome" type="text" placeholder="Digite o nome do livro">
-        <input id="capituloNumero" type="number" placeholder="Digite capitulo">
-        <input id="versoNumero" type="number" placeholder="Digite o versiculo">
-    <button id="ativarModal" onclick="PesquisarDados()">Clique aqui</button>
+  <!-- Formulário -->
+  <div id="containerPesquisa"
+       class="max-w-xl w-[90%] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-5 rounded-xl border border-black/60 shadow-md shadow-orange-500 flex flex-col items-center bg-white/90">
+    <h1 class="text-center text-xl font-bold mb-4">Buscador bíblico</h1>
+    <input id="livroNome" type="text" placeholder="Digite o nome do livro"
+           class="border border-gray-300 rounded-xl py-1.5 px-3 mb-2 w-[90%]" />
+    <input id="capituloNumero" type="number" placeholder="Digite o capítulo"
+           class="border border-gray-300 rounded-xl py-1.5 px-3 mb-2 w-[90%]" />
+    <input id="versoNumero" type="number" placeholder="Digite o versículo"
+           class="border border-gray-300 rounded-xl py-1.5 px-3 mb-4 w-[90%]" />
+    <button id="ativarModal" onclick="PesquisarDados()"
+            class="border border-neutral-600 rounded-xl py-2 px-4 hover:scale-105 transition-transform duration-300 shadow-orange-500 hover:shadow-md">
+      Clique aqui
+    </button>
+  </div>
+
+  <!-- Modal -->
+  <div id="containerInformacoes"
+       class="hidden absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] md:w-[600px] min-h-[500px] border border-black rounded-xl bg-white text-center z-[1000] p-4 flex flex-col">
+    <svg id="fecharModal" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+         stroke-width="1.5" stroke="currentColor"
+         class="w-6 h-6 absolute top-3 right-3 cursor-pointer">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+    </svg>
+    <h1 class="text-lg font-bold mt-2">Informações da busca</h1>
+    <div id="dadosBiblicos" class="flex flex-col justify-between h-full mt-6">
+      <div class="modalTop">
+        <p id="referencia" class="underline mb-2">Sem dados</p>
+        <p id="texto"></p>
+      </div>
+      <div class="modalBottom mt-auto">
+        <p id="versao" class="text-sm text-gray-600"></p>
+      </div>
     </div>
+  </div>
 
-    <div id="containerInformacoes" class="border-black flex-col flex" >
-        <svg id="fecharModal" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-        </svg>
-        <h1 class="font-bold">Informações da busca</h1>
-        <div id="dadosBiblicos" class="flex flex-col  justify-between">
-           <div class="modalTop">
-             <p id="referencia" class="underline">Sem dados</p>
-                <p id="texto" ></p>
-           </div>
-           <div class="modalBottom flex flex-col justify-end">
-              <p id="versao"></p>
-           </div>
-        </div>
-    </div>
+  <!-- Rodapé -->
+  <footer class="absolute bottom-0 w-full bg-orange-500 text-center py-2 text-xs text-white h-[4%] ">
+    <p>
+      Desenvolvido por
+      <a href="https://linkedin.com/in/derick-campos-santos" class="underline">Dérick Campos Santos</a>
+    </p>
+  </footer>
 
-    <footer>
-        <div class="rodape">
-            <p>Desenvolvido por <a href="https://linkedin.com/in/derick-campos-santos">Dérick Campos Santos</a></p>
-        </div>
-    </footer>
-    
-    <script src="script.js"></script>
-    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-    <script>
-         new window.VLibras.Widget('https://vlibras.gov.br/app');
-    </script>
+  <!-- Scripts -->
+  <script src="script.js"></script>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    // Inicializa VLibras e reinicia após carregamento
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
 </body>
 </html>

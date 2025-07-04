@@ -116,6 +116,7 @@ body{
 @media (width < 480px){
     #containerPesquisa{
         width: 90%;
+        margin: 10px;
     }
 
     #containerInformacoes{
