@@ -1,6 +1,6 @@
 const BtnPesquisa = document.getElementById('BtnPesquisa');
 const BackBtn = document.getElementById('BackBtn');
-const nextBtn = document.getElementById('BtnNext');
+const NextBtn = document.getElementById('NextBtn');
 
 async function PesquisarDados(livro, capitulo, verso) {
 
@@ -30,21 +30,27 @@ containerInformacoes.style.display = "flex";
 }
 
 BackBtn.addEventListener('click', (e) => {
-    const livro = document.getElementById('livroNome').value;
-    const capitulo = document.getElementById('capituloNumero').value;
-    const verso = document.getElementById('versoNumero').value;
+    let livro = document.getElementById('livroNome').value;
+    let capitulo = document.getElementById('capituloNumero').value;
+    let verso = document.getElementById('versoNumero').value;
+    let valor;
 
-    verso = verso - 1;
+    valor = Number(verso);
+
+    verso = valor - 1
 
     PesquisarDados(livro, capitulo, verso)
 });
 
 NextBtn.addEventListener('click', (e) => {
-    const livro = document.getElementById('livroNome').value;
-    const capitulo = document.getElementById('capituloNumero').value;
-    const verso = document.getElementById('versoNumero').value;
+    let livro = document.getElementById('livroNome').value;
+    let capitulo = document.getElementById('capituloNumero').value;
+    let verso = document.getElementById('versoNumero').value;
+    let valor;
 
-    verso = verso + 1;
+    valor = Number(verso);
+
+    verso = valor + 1
 
     PesquisarDados(livro, capitulo, verso)
 });
