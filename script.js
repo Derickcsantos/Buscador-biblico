@@ -27,7 +27,7 @@ document.getElementById('versao').innerText = dados.translation_name;
 containerInformacoes.style.display = "flex";
 }
 
-BtnPesquisa.document.addEventListener('click', () => {
+BtnPesquisa.document.addEventListener('click', (e) => {
     const livro = document.getElementById('livroNome').value;
     const capitulo = document.getElementById('capituloNumero').value;
     const verso = document.getElementById('versoNumero').value;
