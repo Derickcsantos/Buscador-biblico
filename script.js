@@ -33,7 +33,7 @@ BtnPesquisa.document.addEventListener('click', () => {
     const verso = document.getElementById('versoNumero').value;
 
     PesquisarDados(livro, capitulo, verso)
-}
+});
 
 const btnfecharModal = document.getElementById('fecharModal');
 
