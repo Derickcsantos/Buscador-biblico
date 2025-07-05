@@ -1,4 +1,6 @@
 const BtnPesquisa = document.getElementById('BtnPesquisa');
+const BackBtn = document.getElementById('BackBtn');
+const nextBtn = document.getElementById('BtnNext');
 
 async function PesquisarDados(livro, capitulo, verso) {
 
@@ -26,6 +28,26 @@ document.getElementById('texto').innerText = dados.text;
 document.getElementById('versao').innerText = dados.translation_name;
 containerInformacoes.style.display = "flex";
 }
+
+BackBtn.addEventListener('click', (e) => {
+    const livro = document.getElementById('livroNome').value;
+    const capitulo = document.getElementById('capituloNumero').value;
+    const verso = document.getElementById('versoNumero').value;
+
+    verso = verso - 1;
+
+    PesquisarDados(livro, capitulo, verso)
+});
+
+NextBtn.addEventListener('click', (e) => {
+    const livro = document.getElementById('livroNome').value;
+    const capitulo = document.getElementById('capituloNumero').value;
+    const verso = document.getElementById('versoNumero').value;
+
+    verso = verso + 1;
+
+    PesquisarDados(livro, capitulo, verso)
+});
 
 BtnPesquisa.addEventListener('click', (e) => {
     const livro = document.getElementById('livroNome').value;
