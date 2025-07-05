@@ -1,7 +1,7 @@
-async function PesquisarDados() {
-    const livro = document.getElementById('livroNome').value;
-    const capitulo = document.getElementById('capituloNumero').value;
-    const verso = document.getElementById('versoNumero').value;
+const BtnPesquisa = document.getElementById('BtnPesquisa');
+
+async function PesquisarDados(livro, capitulo, verso) {
+
     const containerInformacoes = document.getElementById('containerInformacoes');
 
     let url = await fetch(`https://bible-api.com/${livro}+${capitulo}:${verso}?translation=almeida`);
@@ -25,6 +25,14 @@ document.getElementById('referencia').innerText = dados.reference;
 document.getElementById('texto').innerText = dados.text;
 document.getElementById('versao').innerText = dados.translation_name;
 containerInformacoes.style.display = "flex";
+}
+
+BtnPesquisa.document.addEventListener('click', () => {
+    const livro = document.getElementById('livroNome').value;
+    const capitulo = document.getElementById('capituloNumero').value;
+    const verso = document.getElementById('versoNumero').value;
+
+    PesquisarDados(livro, capitulo, verso)
 }
 
 const btnfecharModal = document.getElementById('fecharModal');
